@@ -3,19 +3,19 @@ import { IUser, useStore } from '../store'
 import { showNotification } from '@mantine/notifications'
 import { useForm } from '@mantine/form'
 import { z } from 'zod'
-import { IconTransferIn } from '@tabler/icons';
+import { IconTransferIn } from '@tabler/icons'
 
 const Transactions = ({ name, balance, accNumber, userTransactions, toUser }: IUser) => {
   const { makeTransaction, getUsers } = useStore()
 
   const form = useForm({
     initialValues: {
-      amount: null,
+      amount: undefined,
       description: '',
       fromUser: accNumber,
       toUser
-    },
-  });
+    }
+  })
 
   const handleClick = async () => {
     const transaction = await makeTransaction(form.values)

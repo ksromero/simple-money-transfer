@@ -23,7 +23,7 @@ export interface IUser {
 }
 
 export interface ITransactionRequest {
-  amount: number | null | undefined,
+  amount: number | undefined,
   description: string,
   fromUser: number,
   toUser: number
@@ -47,10 +47,6 @@ export const useStore = create<Store>((set) => ({
     }))
   },
   makeTransaction: async ({ amount, description, fromUser, toUser }) => {
-    if (amount === null) {
-      amount = undefined
-    }
-
     return await fetch(`${URL}/transaction`, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
@@ -62,5 +58,4 @@ export const useStore = create<Store>((set) => ({
       })
     })
   }
-
-}));
+}))

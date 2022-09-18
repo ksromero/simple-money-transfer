@@ -4,12 +4,10 @@ import Main from './components/Main'
 
 function App() {
   return (
-    <div>
-      <Container style={{ paddingTop: 100, paddingBottom: 40 }}>
-        <Main />
-      </Container>
-    </div>
-  );
+    <Container style={{ paddingTop: 100, paddingBottom: 40 }}>
+      <Main />
+    </Container>
+  )
 }
 
-export default App;
+export default App
