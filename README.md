@@ -15,14 +15,6 @@ Simple system that facilitate money transfer capabilities.
 
 ## Get Started
 
-**Frontend**
-
-```bash
-cd frontend
-npm install
-npm run start
-```
-
 **Backend**
 
 First we need to [install Docker](https://docs.docker.com/desktop/install/windows-install/)
@@ -30,6 +22,14 @@ First we need to [install Docker](https://docs.docker.com/desktop/install/window
 ```bash
 cd backend
 docker compose up
+```
+
+**Frontend**
+
+```bash
+cd frontend
+npm install
+npm run start
 ```
 
 
