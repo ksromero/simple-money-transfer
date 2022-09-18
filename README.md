@@ -34,3 +34,5 @@ docker compose up
 
 
 Finally, access the app on http://localhost:3000/
+
+![image](https://github.com/ksromero/simple-money-transfer/blob/master/demo.gif)
