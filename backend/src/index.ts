@@ -5,6 +5,8 @@ import apiRouter from './routers/api'
 import { handleError } from './shared/app.error'
 import seed from './database/seeds'
 import cors from 'cors'
+import helmet from 'helmet'
+import mongoSanitize from 'express-mongo-sanitize'
 
 const app = express()
 
@@ -14,6 +16,8 @@ connectDB();
   await seed()
 })()
 
+app.use(helmet())
+app.use(mongoSanitize())
 app.use(cors())
 app.use([express.json(), express.urlencoded({ extended:true })])
 app.use(apiRouter)
